@@ -7,24 +7,21 @@
 /*$(function(){
   setHeight();
 });
-
 $(window).resize(function() {
   setHeight();
 });
-
 function setHeight() {
   var Height = $(window).height();
   $('.slide').css('height', Height);
-
 }
 */
 const questions = [
-    {
-        question: "Inside which HTML element do we put the JavaScript?",
-        choices: ["a. w", "b. o", "c. m", "d. e"],
-        answer: "d. e"
-    },
-  ]
+  {
+      question: "In the school playground, who picked Hamad in their team?",
+      choices: ["a) Khalid", "b) Faisal", "c) Hamad did not participate", "d) Nobody picked Hamad in their team"],
+      answer: "d) Nobody picked Hamad in their team"
+  },
+]
 
 var timer = document.getElementById("timer");
 var startDiv = document.getElementById("start");
@@ -42,8 +39,8 @@ var correctAns = 0;
 var questionNum = 0;
 var timeLeft = {};
 /**
- * FUNCTIONS
- */
+* FUNCTIONS
+*/
 
 // WHEN I click the start button, timer starts
 
@@ -52,77 +49,79 @@ var totalTime = 151;
 
 
 function goToByScroll(id){			$('html,body').animate({
-  scrollTop: $("."+id).offset().top +0
-  },400);
+scrollTop: $("."+id).offset().top +0
+},400);
 }
 
 var totalTime = 151;
 function newQuiz() {
-    questionIndex = 0;
-    totalTime = 150;
+  questionIndex = 0;
+  totalTime = 150;
 //    timeLeft.textContent = totalTime;
-    initialInput.textContent = "";
+  initialInput.textContent = "";
 
-    startDiv.style.display = "none";
-    questionDiv.style.display = "block";
-    // timer.style.display = "block";
-    // timesUp.style.display = "none";
+  startDiv.style.display = "none";
+  questionDiv.style.display = "block";
+  // timer.style.display = "block";
+  // timesUp.style.display = "none";
 
-    var startTimer = setInterval(function() {
-        totalTime--;
-        timeLeft.textContent = totalTime;
-        if(totalTime <= 0) {
-            clearInterval(startTimer);
-            if (questionIndex < questions.length - 1) {
-                gameOver();
-            }
-        }
-    },1000);
+  var startTimer = setInterval(function() {
+      totalTime--;
+      timeLeft.textContent = totalTime;
+      if(totalTime <= 0) {
+          clearInterval(startTimer);
+          if (questionIndex < questions.length - 1) {
+              gameOver();
+          }
+      }
+  },1000);
 
-    showQuiz();
+  showQuiz();
 };
 
 // then presented with questions and choices
 function showQuiz() {
-    nextQuestion();
+  nextQuestion();
 }
 
 function nextQuestion() {
-    questionTitle.textContent = questions[questionIndex].question;
-    choiceA.textContent = questions[questionIndex].choices[0];
-    choiceB.textContent = questions[questionIndex].choices[1];
-    choiceC.textContent = questions[questionIndex].choices[2];
-    choiceD.textContent = questions[questionIndex].choices[3];
+  questionTitle.textContent = questions[questionIndex].question;
+  choiceA.textContent = questions[questionIndex].choices[0];
+  choiceB.textContent = questions[questionIndex].choices[1];
+  choiceC.textContent = questions[questionIndex].choices[2];
+  choiceD.textContent = questions[questionIndex].choices[3];
 }
 
 
 // after question is answered, show if correct or wrong
 function checkAnswer(answer) {
 
-    var lineBreak = document.getElementById("lineBreak");
-    lineBreak.style.display = "block";
-    answerCheck.style.display = "block";
+  var lineBreak = document.getElementById("lineBreak");
+  lineBreak.style.display = "block";
+  answerCheck.style.display = "block";
 
-    if (questions[questionIndex].answer === questions[questionIndex].choices[answer]) {
-        // correct answer, add 1 score to final score
-        correctAns++;
-        // console.log(correctAns);
-        answerCheck.textContent = "Correct! Emoji will come";
-    } else {
-        // wrong answer, deduct 10 second from timer
-        //totalTime -= 10;
-        //timeLeft.textContent = totalTime;
-        answerCheck.textContent = "Wrong! The correct answer is: " + questions[questionIndex].answer;
-    }
+  if (questions[questionIndex].answer === questions[questionIndex].choices[answer]) {
+      // correct answer, add 1 score to final score
+      correctAns++;
+      // console.log(correctAns);
+      answerCheck.textContent = "Correct! Emoji will come";
+      // answerCheck.src = smiley-emoji.gif;
+      // answerCheck.alt = "Smiley emoji";
+  } else {
+      // wrong answer, deduct 10 second from timer
+      //totalTime -= 10;
+      //timeLeft.textContent = totalTime;
+      answerCheck.textContent = "Wrong! The correct answer is: " + questions[questionIndex].answer;
+  }
 
-    questionIndex++;
-    // repeat with the rest of questions
-    // if (questionIndex < questions.length) {
-    //     nextQuestion();
-    // } else {
-    //     // if no more question, run game over function
-    //     gameOver();
-    // }
+  questionIndex++;
+  // repeat with the rest of questions
+  // if (questionIndex < questions.length) {
+  //     nextQuestion();
+  // } else {
+  //     // if no more question, run game over function
+  //     gameOver();
+  // }
 }
 
 
@@ -135,8 +134,8 @@ function chooseC() { checkAnswer(2); }
 function chooseD() { checkAnswer(3); }
 
 /**
- * ADD EVENT LISTENERS
- */
+* ADD EVENT LISTENERS
+*/
 startQuizBtn.addEventListener("click", newQuiz);
 choiceA.addEventListener("click", chooseA);
 choiceB.addEventListener("click", chooseB);
