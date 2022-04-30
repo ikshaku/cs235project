@@ -32,7 +32,7 @@ var choiceA = document.getElementById("btn0");
 var choiceB = document.getElementById("btn1");
 var choiceC = document.getElementById("btn2");
 var choiceD = document.getElementById("btn3");
-var answerCheck = document.getElementById("answerCheck");
+//var answerCheck = document.getElementById("answerCheck");
 var initialInput = {};
 
 var correctAns = 0;
@@ -51,6 +51,7 @@ var totalTime = 151;
 function goToByScroll(id){			$('html,body').animate({
 scrollTop: $("."+id).offset().top +0
 },400);
+console.log("Time taken to read: " + (new Date()).getSeconds() + " seconds");
 }
 
 var totalTime = 151;
@@ -96,22 +97,38 @@ function nextQuestion() {
 // after question is answered, show if correct or wrong
 function checkAnswer(answer) {
 
-  var lineBreak = document.getElementById("lineBreak");
-  lineBreak.style.display = "block";
-  answerCheck.style.display = "block";
+  //var lineBreak = document.getElementById("lineBreak");
+  //lineBreak.style.display = "block";
+  //answerCheck.style.display = "block";
 
   if (questions[questionIndex].answer === questions[questionIndex].choices[answer]) {
       // correct answer, add 1 score to final score
       correctAns++;
       // console.log(correctAns);
-      answerCheck.textContent = "Correct! Emoji will come";
+      var emoji = document.createElement("img");
+      emoji.src = 'smiley-emoji.gif';
+      emoji.alt = "Yayyy!";
+      emoji.height = "200";
+      emoji.width = "200";
+      document.getElementById("answerCheck").appendChild(emoji);
+      console.log("You took" + " " + (new Date()).getSeconds() + " seconds for the quiz") ;
+      //answerCheck.textContent = "Correct! Emoji will come";
       // answerCheck.src = smiley-emoji.gif;
       // answerCheck.alt = "Smiley emoji";
   } else {
       // wrong answer, deduct 10 second from timer
       //totalTime -= 10;
       //timeLeft.textContent = totalTime;
-      answerCheck.textContent = "Wrong! The correct answer is: " + questions[questionIndex].answer;
+      var emoji = document.createElement("img");
+      emoji.src = 'wrong.gif';
+      emoji.alt = "Try Again";
+      emoji.height = "200";
+      emoji.width = "200";
+      document.getElementById("answerCheck").appendChild(emoji);
+      var wrong = document.getElementById("wrongAns");
+      wrong.style.display = "block";
+      wrong.textContent = "Oops! Better Luck Next Time!";
+      console.log("You took" + " " + (new Date()).getSeconds() + "seconds") ;
   }
 
   questionIndex++;
