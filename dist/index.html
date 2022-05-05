@@ -8,7 +8,6 @@
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <html>
 <head>
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -16,7 +15,7 @@
 
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>-->
 <script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
 <meta charset=utf-8 />
 <title>JS Bin</title>
 </head>
@@ -32,7 +31,8 @@
 <div class="p1 slide" onClick="goToByScroll('p2')">
 <table><td><div>
 
-  <img class="floating" src="http://www.eznetu.com/castle.png" />
+  <!-- <img class="floating" src="http://www.eznetu.com/castle.png" /> -->
+  <img src="page1.png" />
   <p>I came into my classroom on the first day of school. Everyone was sitting down. The teacher,
 Miss Hissa welcomed me and told the class “Today a new student is joining us, his name is
 Hamad. Class what do we say to Hamad?”
@@ -44,7 +44,7 @@ With heavy steps, I went to my seat.</p>
 
   <div class="p2 slide" onClick="goToByScroll('p3')">
     <table><td><div>
-
+      <img src="page 2.png" />
   <p>The bell rang, class ended, and a boy came up to me. His name is Khalid. He asked: “How are
 you Hamad? I didn’t answer. Another boy joined, Faisal, he asked me “Is your house close to
 school?” I was very reluctant to answer. I simply nodded with my head to say yes. They asked
@@ -55,7 +55,7 @@ more questions, but I answered without speaking a word.</p>
 
 
 <div class="p3 slide" onClick="goToByScroll('p4')"><table><tr><td><div>
-
+  <img src="page3.png" />
   <p>During recess, I noticed Khalid and Faisal whispering with the others. It seemed they are about
 to head some place. I followed them, until we reached the school playground. Each took a spot
 and they started to pick their teams. I waited for my turn until I was left alone and they started
@@ -65,7 +65,7 @@ to kick the ball and start the game.</p>
 </div>
 
   <div class="p4 slide" onClick="goToByScroll('p5')"><table><tr><td><div>
-
+    <img src="page4.png" />
   <p>I didn’t understand why they didn’t pick me. Is it because Im the new student? </p>
 
   </div></td></tr></table>
@@ -80,9 +80,6 @@ to kick the ball and start the game.</p>
       <!-- <p>Quiz</p> -->
 
       <div class="row">
-            <!-- <div id="timer" class="col text-right">
-                <i class="far fa-clock"></i> Time: <span id="timeLeft">0</span>
-            </div> -->
         </div>
 
       <div id="everything" >
@@ -104,41 +101,30 @@ to kick the ball and start the game.</p>
   </div></td></tr></table>
 </div>
 
-    <!-- <div class="p5 slide" onClick="goToByScroll('p6')"><table><tr><td><div>
-  <p>In the school lunchroom my class mates sat in groups. I went by all the groups hoping that one
-group would ask me to join them. However I didn’t find any seats around them.
-I sat far away. I eat my food while seeing them all chat and laugh.</p>
-  </div></td></tr></table>
-</div> -->
-
     <div class="p6 slide" onClick="goToByScroll('p7')"><table><tr><td><div>
-
-  <!-- <p>In the art room I made beautiful paintings. I love reading stories. They taught me how to tell
-stories and create their characters. Even though it’s true that no one joined me in any activity
-today, however I love my hobbies, and I’m happy with what I accomplished.</p> -->
 
 <!--quiz div  -->
         <div id="questionDiv" style="display: block;">
           <p id="questionTitle" class="pl-5 ml-2 pt-5 justify-content-center font-weight-bold"></p>
-          <!-- <p id="questionTitle" class="pl-5 ml-2 pt-5 justify-content-center font-weight-bold">Inside which HTML element do we put the JavaScript?</p> -->
           <div class="pl-5 pt-2 pb-3 m-2 justify-content-center" >
               <p><button id="btn0" class="btn btn-dark"></button></p>
               <p><button id="btn1" class="btn btn-dark"></button></p>
               <p><button id="btn2" class="btn btn-dark"></button></p>
               <p><button id="btn3" class="btn btn-dark"></button></p>
-              <!-- <hr id="lineBreak" style="display: none" class="mt-4"> -->
-              <!-- <p id="answerCheck" style="display: none;"></p> -->
-              <div style="text-align: center;" id="answerCheck"></div>
-              <p style="text-align: center;display: none;" id="wrongAns"></p>
               
           </div>
-          <!-- <img id="answerCheck" src = "smiley-emoji.gif" style="margin: 0 auto;" height="30%" width="30%" alt="smilley" /> -->
         </div>
 
   </div></td></tr></table>
 </div>
 
- <div class="p7 slide" onClick="goToByScroll('p8')"><table><tr><td><div>
+<div class="p7 slide" onClick="goToByScroll('p8')"><table><tr><td><div>
+  <div style="text-align: center;" id="answerCheck"></div>
+              <p style="text-align: center;display: none;" id="wrongAns"></p>
+            </div></td></tr></table>
+          </div>           
+
+ <div class="p8 slide" onClick="goToByScroll('p9')"><table><tr><td><div>
 
   <p>In the following day, a student came in class. Miss Hissa welcomed him saying: “ Today a new
 student is joining us, his name is Hasan. Class what do we say to Hasan?”
@@ -149,7 +135,52 @@ friends with everyone now.”</p>
   </div></td></tr></table>
 </div>
 
-   <div class="p8 slide" onClick="goToByScroll('p9')"><table><tr><td><div>
+<div class="p9 slide" onClick="goToByScroll('p10')"><table><tr><td><div>
+  <div class="container-fluid">
+
+    <div class="row">
+      </div>
+
+    <div id="everything" >
+
+      
+      <main >
+        <!--start screen  -->
+        <div id="start" style="text-align: center;" class="justify-content-center" onClick="goToByScroll('p9')">
+                    <h1 class="font-weight-bold">Quiz Challenge 2</h1>
+                    <p style="text-align: center;">Answer this question</p>
+                    <button type="button" id="start-quiz-button2" class="btn btn-info text-align-center">Start Quiz</button>
+        </div>
+      </main>
+      </div>
+
+    </div>
+</div></td></tr></table>
+</div>
+
+<div class="p10 slide" onClick="goToByScroll('p11')"><table><tr><td><div>
+
+  <!--quiz div  -->
+          <div id="questionDiv2" style="display: block;">
+            <p id="questionTitle2" class="pl-5 ml-2 pt-5 justify-content-center font-weight-bold"></p>
+            <div class="pl-5 pt-2 pb-3 m-2 justify-content-center" >
+                <p><button id="btn4" class="btn btn-dark"></button></p>
+                <p><button id="btn5" class="btn btn-dark"></button></p>
+                <p><button id="btn6" class="btn btn-dark"></button></p>
+                <p><button id="btn7" class="btn btn-dark"></button></p>
+            </div>
+          </div>
+  
+    </div></td></tr></table>
+  </div>
+
+  <div class="p11 slide" onClick="goToByScroll('p12')"><table><tr><td><div>
+    <div style="text-align: center;" id="answerCheck2"></div>
+                <p style="text-align: center;display: none;" id="wrongAns2"></p>
+              </div></td></tr></table>
+            </div>  
+
+   <div class="p12 slide" onClick="goToByScroll('p13')"><table><tr><td><div>
 
   <p>It wasn’t as I expected. Hasan quickly became everyones friend. They all chatted together and
 played together. He joined them in the lunchroom, while I stayed alone. “Why” I wondered. “Do
@@ -159,7 +190,7 @@ they think I’m boring or shy or can’t be a friend?”.</p>
 </div>
 
 
-     <div class="p9 slide" onClick="goToByScroll('p10')"><table><tr><td><div>
+     <div class="p13 slide" onClick="goToByScroll('p14')"><table><tr><td><div>
 
   <p>In the art room, I painted a large ship that had all my classmates in it. Hasan came up to me
 and admired my painting. I was worried I wouldn’t answer him with words if he asked me
@@ -171,7 +202,7 @@ hearing aid you’re wearing.”</p>
 </div>
 
 
-       <div class="p10 slide" onClick="goToByScroll('p11')"><table><tr><td><div>
+       <div class="p14 slide" onClick="goToByScroll('p15')"><table><tr><td><div>
 
   <p>He explained that he learned sign language since his younger sister also uses a hearing aid. He
 encouraged to speak more. I answered “But I thpeek with difficulty” (meaning I speak with
@@ -180,7 +211,7 @@ verbally with the others too.</p>
          
          </div></td></tr></table>
 </div>
-         <div class="p11 slide" onClick="goToByScroll('p12')"><table><tr><td><div>
+         <div class="p15 slide" onClick="goToByScroll('p16')"><table><tr><td><div>
            <p>Hasan asked if I would join him for the class activity tomorrow. We must create teams of three.
 Each team is to act out a story for the rest of the class. At first I was nervous to say yes. In the
 end I was convinced to push myself and try something I’m not used to. Our team was Hasan,
@@ -189,7 +220,7 @@ Jamal, and myself.</p>
   </div></td></tr></table>
 </div>
 
-  <div class="p12 slide" onClick="goToByScroll('p13')"><table><tr><td><div>
+  <div class="p16 slide" onClick="goToByScroll('p17')"><table><tr><td><div>
            <p>Before going into the lunchroom the following day I thought “will I be their friend, or will I stay
 the new student?”.
 After some thinking I went in, I asked Hasan “ Can I thit with you?” (meaning: Can I sit with
@@ -199,21 +230,21 @@ thanked them.</p>
   </div></td></tr></table>
 </div>
 
-  <div class="p13 slide" onClick="goToByScroll('p14')"><table><tr><td><div>
+  <div class="p17 slide" onClick="goToByScroll('p18')"><table><tr><td><div>
            <p>When it was time for recess, I was playing ball with my classmates. At that moment, I realized
 that we might never get to know each other if we don't initiate contact.</p>
 
   </div></td></tr></table>
 </div>
 
-  <div class="p14 slide" onClick="goToByScroll('p15')"><table><tr><td><div>
+  <div class="p18 slide" onClick="goToByScroll('p19')"><table><tr><td><div>
            <p>When it was time for recess, I was playing ball with my classmates. At that moment, I realized
 that we might never get to know each other if we don't initiate contact.</p>
 
   </div></td></tr></table>
 </div>
 
-  <div class="p15 slide" onClick="goToByScroll('p16')"><table><tr><td><div>
+  <div class="p19 slide" onClick="goToByScroll('p20')"><table><tr><td><div>
            <p>Be yourself
 whoever accepts you, will accept you</p>
 
@@ -223,10 +254,11 @@ whoever accepts you, will accept you</p>
 </body>
 </html>
 <!-- partial -->
-<script  src="./script.js"></script>
+<script src="./script.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/1d37754851.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
 </body>
 </html>

@@ -46,9 +46,9 @@ p { font-size:1em; font-size:1.25vw; line-height:1.4; margin:0 auto;}
 .cover{background: #f2eee2;}
 
 .p1{background: #eef0fd;}
-.p2{background: url(http://www.eznetu.com/happy-giant.png) no-repeat bottom #9cddee;
+/* .p2{background: url(http://www.eznetu.com/happy-giant.png) no-repeat bottom #9cddee;
   background-size:auto 50%;
-}
+} */
 .p3{background:  #f3c36f;
 }
 .p4{background: #def;}
@@ -61,6 +61,11 @@ color:#cfa;
 .p8 {background:#222; color:#bbb;}
 .p9 {background:#ccc; color:#333;}
 .p10 {cursor:default;}
+.p11 { background:url(http://www.eznetu.com/beanstalk-rough.png) right bottom no-repeat #59c;
+  background-size:auto 100%;
+color:#cfa;
+}
+/* .p12 {background:#222; color:#bbb;} */
 
 /* .button {
   display:inline-block;
@@ -104,6 +109,10 @@ animation: floating 5s ease-in-out infinite;
 #questionTitle {
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
+}
+#questionTitle2 {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #answerCheck {
