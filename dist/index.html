@@ -30,8 +30,13 @@
 
 <div class="p1 slide" onClick="goToByScroll('p2')">
 <table><td><div>
-
-  <!-- <img class="floating" src="http://www.eznetu.com/castle.png" /> -->
+  <!-- <script>
+    var startTime = new Date().getTime();
+    function doneLoading() {
+        var loadtime = new Date().getTime() - startTime;
+        console.log("image took " + loadtime + "ms to load");
+    };    
+    </script> -->
   <img src="page1.png" />
   <p>I came into my classroom on the first day of school. Everyone was sitting down. The teacher,
 Miss Hissa welcomed me and told the class “Today a new student is joining us, his name is
@@ -118,13 +123,32 @@ to kick the ball and start the game.</p>
   </div></td></tr></table>
 </div>
 
+
 <div class="p7 slide" onClick="goToByScroll('p8')"><table><tr><td><div>
   <div style="text-align: center;" id="answerCheck"></div>
               <p style="text-align: center;display: none;" id="wrongAns"></p>
-            </div></td></tr></table>
-          </div>           
+  </div></td></tr></table>
+</div>  
+          
+<div class="p8 slide" onClick="goToByScroll('p9')"><table><tr><td><div>
 
- <div class="p8 slide" onClick="goToByScroll('p9')"><table><tr><td><div>
+  <p>In the school lunchroom my class mates sat in groups. I went by all the groups hoping that one
+    group would ask me to join them. However I didn’t find any seats around them.
+    I sat far away. I eat my food while seeing them all chat and laugh.</p>
+          
+</div></td></tr></table>
+</div>
+
+<div class="p9 slide" onClick="goToByScroll('p10')"><table><tr><td><div>
+
+  <p>In the art room I made beautiful paintings. I love reading stories. They taught me how to tell
+    stories and create their characters. Even though it’s true that no one joined me in any activity
+    today, however I love my hobbies, and I’m happy with what I accomplished.</p>
+
+  </div></td></tr></table>
+</div>
+
+ <div class="p10 slide" onClick="goToByScroll('p11')"><table><tr><td><div>
 
   <p>In the following day, a student came in class. Miss Hissa welcomed him saying: “ Today a new
 student is joining us, his name is Hasan. Class what do we say to Hasan?”
@@ -135,7 +159,7 @@ friends with everyone now.”</p>
   </div></td></tr></table>
 </div>
 
-<div class="p9 slide" onClick="goToByScroll('p10')"><table><tr><td><div>
+<div class="p11 slide" onClick="goToByScroll('p12')"><table><tr><td><div>
   <div class="container-fluid">
 
     <div class="row">
@@ -146,7 +170,7 @@ friends with everyone now.”</p>
       
       <main >
         <!--start screen  -->
-        <div id="start" style="text-align: center;" class="justify-content-center" onClick="goToByScroll('p9')">
+        <div id="start" style="text-align: center;" class="justify-content-center" onClick="goToByScroll('p12')">
                     <h1 class="font-weight-bold">Quiz Challenge 2</h1>
                     <p style="text-align: center;">Answer this question</p>
                     <button type="button" id="start-quiz-button2" class="btn btn-info text-align-center">Start Quiz</button>
@@ -158,7 +182,7 @@ friends with everyone now.”</p>
 </div></td></tr></table>
 </div>
 
-<div class="p10 slide" onClick="goToByScroll('p11')"><table><tr><td><div>
+<div class="p12 slide" onClick="goToByScroll('p13')"><table><tr><td><div>
 
   <!--quiz div  -->
           <div id="questionDiv2" style="display: block;">
@@ -174,13 +198,13 @@ friends with everyone now.”</p>
     </div></td></tr></table>
   </div>
 
-  <div class="p11 slide" onClick="goToByScroll('p12')"><table><tr><td><div>
+  <div class="p13 slide" onClick="goToByScroll('p14')"><table><tr><td><div>
     <div style="text-align: center;" id="answerCheck2"></div>
                 <p style="text-align: center;display: none;" id="wrongAns2"></p>
               </div></td></tr></table>
             </div>  
 
-   <div class="p12 slide" onClick="goToByScroll('p13')"><table><tr><td><div>
+   <div class="p14 slide" onClick="goToByScroll('p15')"><table><tr><td><div>
 
   <p>It wasn’t as I expected. Hasan quickly became everyones friend. They all chatted together and
 played together. He joined them in the lunchroom, while I stayed alone. “Why” I wondered. “Do
@@ -190,7 +214,7 @@ they think I’m boring or shy or can’t be a friend?”.</p>
 </div>
 
 
-     <div class="p13 slide" onClick="goToByScroll('p14')"><table><tr><td><div>
+     <div class="p15 slide" onClick="goToByScroll('p16')"><table><tr><td><div>
 
   <p>In the art room, I painted a large ship that had all my classmates in it. Hasan came up to me
 and admired my painting. I was worried I wouldn’t answer him with words if he asked me
@@ -202,7 +226,7 @@ hearing aid you’re wearing.”</p>
 </div>
 
 
-       <div class="p14 slide" onClick="goToByScroll('p15')"><table><tr><td><div>
+       <div class="p16 slide" onClick="goToByScroll('p17')"><table><tr><td><div>
 
   <p>He explained that he learned sign language since his younger sister also uses a hearing aid. He
 encouraged to speak more. I answered “But I thpeek with difficulty” (meaning I speak with
@@ -211,7 +235,7 @@ verbally with the others too.</p>
          
          </div></td></tr></table>
 </div>
-         <div class="p15 slide" onClick="goToByScroll('p16')"><table><tr><td><div>
+         <div class="p17 slide" onClick="goToByScroll('p18')"><table><tr><td><div>
            <p>Hasan asked if I would join him for the class activity tomorrow. We must create teams of three.
 Each team is to act out a story for the rest of the class. At first I was nervous to say yes. In the
 end I was convinced to push myself and try something I’m not used to. Our team was Hasan,
@@ -220,7 +244,17 @@ Jamal, and myself.</p>
   </div></td></tr></table>
 </div>
 
-  <div class="p16 slide" onClick="goToByScroll('p17')"><table><tr><td><div>
+<div class="p18 slide" onClick="goToByScroll('p19')"><table><tr><td><div>
+  <p>We gathered items to help us tell the story. With my art skills I created our costumes from
+    cutout cardboard and painted them.
+    When it was our turn, the class laughed and cheered. They learned about my skills, my love for
+    story telling, and my special way of speaking. They love what we did, and the whole class and
+    Miss Hessa all clapped for us.</p>
+
+</div></td></tr></table>
+</div>
+
+  <div class="p19 slide" onClick="goToByScroll('p20')"><table><tr><td><div>
            <p>Before going into the lunchroom the following day I thought “will I be their friend, or will I stay
 the new student?”.
 After some thinking I went in, I asked Hasan “ Can I thit with you?” (meaning: Can I sit with
@@ -230,21 +264,14 @@ thanked them.</p>
   </div></td></tr></table>
 </div>
 
-  <div class="p17 slide" onClick="goToByScroll('p18')"><table><tr><td><div>
+  <div class="p20 slide" onClick="goToByScroll('p21')"><table><tr><td><div>
            <p>When it was time for recess, I was playing ball with my classmates. At that moment, I realized
 that we might never get to know each other if we don't initiate contact.</p>
 
   </div></td></tr></table>
 </div>
 
-  <div class="p18 slide" onClick="goToByScroll('p19')"><table><tr><td><div>
-           <p>When it was time for recess, I was playing ball with my classmates. At that moment, I realized
-that we might never get to know each other if we don't initiate contact.</p>
-
-  </div></td></tr></table>
-</div>
-
-  <div class="p19 slide" onClick="goToByScroll('p20')"><table><tr><td><div>
+  <div class="p21 slide" onClick="goToByScroll('p22')"><table><tr><td><div>
            <p>Be yourself
 whoever accepts you, will accept you</p>
 
