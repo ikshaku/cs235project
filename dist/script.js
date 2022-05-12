@@ -33,19 +33,23 @@ var initialInput = {};
 var correctAns = 0;
 var questionNum = 0;
 
-function goToByScroll(id){$('html,body').animate({
+var t1;
+
+function goToByScroll(id){
+  $('html,body').animate({
+
 scrollTop: $("."+id).offset().top +0
 },400);
-console.log("Time taken to read: " + (new Date()).getSeconds() + " seconds");
+t1 = (new Date()).getSeconds();
+console.log("Time taken to read: " + ((new Date()).getSeconds()) + " seconds");
 }
 
-function newQuiz() {
-  nextQuestion();
-};
-
-function newQuiz2() {
-  nextQuestion2();
-};
+// var startTime = new Date().getTime();
+// var loadtime;
+//     function doneLoading() {
+//         var loadtime = new Date().getTime();
+//         console.log("image took " + loadtime + "ms to load");
+//     }; 
 
 function nextQuestion() {
   questionIndex = 0;
@@ -92,7 +96,7 @@ questionIndex = 0;
   ]
   if (questions[questionIndex].answer === questions[questionIndex].choices[ans]) {
       var emoji = document.createElement("img");
-      emoji.src = 'smiley-emoji.gif';
+      emoji.src = 'happy.png';
       emoji.alt = "Yayyy!";
       emoji.height = "200";
       emoji.width = "200";
@@ -100,7 +104,7 @@ questionIndex = 0;
       console.log("You took" + " " + (new Date()).getSeconds() + " seconds for the quiz") ;
       var wrong = document.getElementById("wrongAns");
       wrong.style.display = "block";
-      wrong.textContent = "Super!";
+      wrong.textContent = "You are correct!";
   } else {
       var emoji = document.createElement("img");
       emoji.src = 'wrong.gif';
